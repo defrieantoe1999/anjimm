@@ -14,17 +14,17 @@ URL_REGEX = r"(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+"
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading"
-    STATUS_DOWNLOADING = "Downloading"
-    STATUS_WAITING = "Queued"
-    STATUS_FAILED = "Failed. Cleaning download"
-    STATUS_CANCELLED = "Cancelled"
-    STATUS_ARCHIVING = "Archiving"
-    STATUS_EXTRACTING = "Extracting"
+    STATUS_UPLOADING = "Mengunggah🔺"
+    STATUS_DOWNLOADING = "Mengunduh🔻"
+    STATUS_WAITING = "Ngantri🔄"
+    STATUS_FAILED = "Gagal❌ menghapus File☣"
+    STATUS_CANCELLED = "Batal📛"
+    STATUS_ARCHIVING = "Membangun file"
+    STATUS_EXTRACTING = "Menmbongkar file "
 
 
 PROGRESS_MAX_SIZE = 100 // 8
-PROGRESS_INCOMPLETE = ['▏', '▎', '▍', '▌', '▋', '▊', '▉']
+PROGRESS_INCOMPLETE = ['⚪', '⚪', '⚪', '⚪', '⚪', '⚪', '⚪']
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -81,10 +81,10 @@ def get_progress_bar_string(status):
     p = min(max(p, 0), 100)
     cFull = p // 8
     cPart = p % 8 - 1
-    p_str = '█' * cFull
+    p_str = '⛔' * cFull
     if cPart >= 0:
         p_str += PROGRESS_INCOMPLETE[cPart]
-    p_str += ' ' * (PROGRESS_MAX_SIZE - cFull)
+    p_str += '🟢' * (PROGRESS_MAX_SIZE - cFull)
     p_str = f"[{p_str}]"
     return p_str
 
