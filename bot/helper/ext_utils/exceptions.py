@@ -1,8 +1,8 @@
 class DirectDownloadLinkException(Exception):
-    """Not method found for extracting direct download link from the http link"""
+    """Link e ora bener CUK"""
     pass
 
 
 class NotSupportedExtractionArchive(Exception):
-    """The archive format use is trying to extract is not supported"""
+    """Mbuh raiso ngekstrak COK"""
     pass
