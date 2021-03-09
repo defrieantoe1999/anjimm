@@ -29,25 +29,25 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>Bot Uptime:</b> {currentTime}\n' \
-            f'<b>Total disk space:</b> {total}\n' \
-            f'<b>Used:</b> {used}  ' \
-            f'<b>Free:</b> {free}\n\n' \
-            f'📊Data Usage📊\n<b>Upload:</b> {sent}\n' \
-            f'<b>Down:</b> {recv}\n\n' \
-            f'<b>CPU:</b> {cpuUsage}% ' \
-            f'<b>RAM:</b> {memory}% ' \
-            f'<b>Disk:</b> {disk}%'
+    stats = f'<b>⏺️Bot Uptime:</b> {currentTime}\n' \
+            f'<b>✴️Total disk space:</b> {total}\n' \
+            f'<b>📶Used:</b> {used}  ' \
+            f'<b>🔁Free:</b> {free}\n\n' \
+            f'📊Data Usage📊\n<b>🔼Upload:</b> {sent}\n' \
+            f'<b>🔽Down:</b> {recv}\n\n' \
+            f'<b>💾CPU:</b> {cpuUsage}% ' \
+            f'<b>♨️RAM:</b> {memory}% ' \
+            f'<b>🈶Disk:</b> {disk}%'
     sendMessage(stats, context.bot, update)
 
 
 @run_async
 def start(update, context):
     start_string = f'''
-Hi, I'm Slam, a multipurpose bot for [hafitz](t.me/hafitzXD)
+Hi, I'm Multi-mirror, a multipurpose bot for [Rem](t.me/Xroxyx)
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
-    update.effective_message.reply_photo("https://telegra.ph/file/db03910496f06094f1f7a.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo("https://telegra.ph/file/ae781365fa22b1fd0a917.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
