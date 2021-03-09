@@ -1,6 +1,6 @@
-[![Slam](https://telegra.ph/file/db03910496f06094f1f7a.jpg)](https://youtu.be/Pk_TthHfLeE)
+[![Multi-mirror](https://telegra.ph/file/ae781365fa22b1fd0a917.jpg)](https://youtu.be/Pk_TthHfLeE)
 
-# Slam Mirror Bot
+# Multi Mirror Bot
 This is a telegram bot writen in python for mirroring files on the internet to our beloved Google Drive.
 
 ## Getting Google OAuth API credential file
@@ -12,8 +12,8 @@ This is a telegram bot writen in python for mirroring files on the internet to o
 - Use the download button to download your credentials.
 - Clone this repo:
 ```
-git clone https://github.com/breakdowns/slam-mirrorbot mirrorbot/
-cd mirrorbot
+git clone https://github.com/Scroxy-X/multi-mirror multi-mirror/
+cd multi-mirror
 ```
 - Move that file to the root of mirrorbot, and rename it to credentials.json
 - Visit [Google API page](https://console.developers.google.com/apis/library)
@@ -28,7 +28,7 @@ python3 generate_drive_token.py
 
 Fork this repo, than upload credentials.json and token.pickle to your forks
 
-<p><a href="https://heroku.com/deploy"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/Scroxy-X/multi-mirror"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
 ## Features supported:
 - Mirroring direct download links to Google Drive
