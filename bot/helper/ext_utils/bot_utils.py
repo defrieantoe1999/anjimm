@@ -93,16 +93,16 @@ def get_readable_message():
     with download_dict_lock:
         msg = ""
         for download in list(download_dict.values()):
-            msg += f"<i>{download.name()}</i> - "
-            msg += download.status()
+            msg += f"<b>📂Nama File/Folder :</b> <code>{download.name()}</code>"
+            msg += f"\n<b>Status👨‍💻 :</b> <i>{download.status()}</i>"
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
-                msg += f"\n<code>{get_progress_bar_string(download)} {download.progress()}</code> of " \
-                       f"{download.size()}" \
-                       f" at {download.speed()}, ETA: {download.eta()} "
+                msg += f"\n<code>{get_progress_bar_string(download)} {download.progress()}</code> of {download.size()}" \
+                       f"\n<b>File yang Kedownload 🧬 :</b> {download.size()}" \
+                       f"\n<b>Kecepatan Internet⚡️:</b> {download.speed()}, \n<b>Perkiraan selesai⏳:- </b> {download.eta()} "
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 if hasattr(download, 'is_torrent'):
-                    msg += f"| P: {download.aria_download().connections} " \
-                           f"| S: {download.aria_download().num_seeders}"
+                    msg+= f"\n<b>Info 🐳 :- Seeders:</b> {download.aria_download().num_seeders}" \
+                          f" & <b>Peers 🍐 :</b> {download.aria_download().connections}"
                 msg += f"\nGID: <code>{download.gid()}</code>"
             msg += "\n\n"
         return msg
