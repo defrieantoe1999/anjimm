@@ -1,5 +1,5 @@
 {
-    "name": "slam-mirrorbot ",
+    "name": "multi-mirror ",
     "description": "Telegram mirror bot with python",
     "logo": "https://telegra.ph/file/6507910fd06d18dfaba82.jpg",
     "keywords": [
@@ -7,9 +7,9 @@
       "telegram",
       "python"
     ],
-    "repository": "https://github.com/breakdowns/slam-mirrorbot",
+    "repository": "https://github.com/Scroxy-X/multi-mirror",
     "website": "https://t.me/SlamMirrorSupport",
-    "success_url": "https://github.com/breakdowns/slam-mirrorbot/blob/master/README.md",
+    "success_url": "https://github.com/Scroxy-X/multi-mirror/blob/master/README.md",
     "stack": "container",
     "env": {
       "ENV": {
